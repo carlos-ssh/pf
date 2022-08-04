@@ -71,7 +71,6 @@ const Portfolio = () => {
                             <span className="conent-title">{type}</span>
                           </h3>
                         </div>
-                        {/* {getModal && <Modal props={modalId} />} */}
                       </div>
                     );
                   }
