@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from "react";
 import Achievements from "./Achievements";
 import Education from "./Education";

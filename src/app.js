@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useEffect } from "react";
 import ScrollToTop from "./components/ScrollToTop";
 import AllRoutes from "./router/AllRoutes";
