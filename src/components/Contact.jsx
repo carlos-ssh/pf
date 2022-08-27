@@ -8,14 +8,12 @@ const Contact = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
+    const serviceID = "service_ccfo48m";
+    const templateID = "template_gz2blv4";
+    const userID = "BgFIW6-2M8PMPP3Ha";
+
     e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_n4mkhz9",
-        "template_ugoztxr",
-        form.current,
-        "user_vYmDSd9PwIuRXUQEDjYwN"
-      )
+    emailjs.sendForm(serviceID, templateID, form.current, userID)
       .then(
         (result) => {
           toast.success("Message Sent Successfully!", {
@@ -43,6 +41,7 @@ const Contact = () => {
       );
   };
 
+  console.log(sendEmail());
   return (
     <>
       <form id="myForm" className="contactform" ref={form} onSubmit={sendEmail}>
@@ -52,7 +51,6 @@ const Contact = () => {
               <input type="text" name="name" placeholder="YOUR NAME" required />
             </div>
           </div>
-          {/* End .col */}
 
           <div className="col-12 col-md-6">
             <div className="form-group">
@@ -90,7 +88,10 @@ const Contact = () => {
           {/* End .col */}
 
           <div className="col-12">
-            <button type="submit" className="button">
+            <button
+              type="submit"
+              className="button"
+            >
               <span className="button-text">Send Message</span>
               <span className="button-icon fa fa-send"></span>
             </button>
