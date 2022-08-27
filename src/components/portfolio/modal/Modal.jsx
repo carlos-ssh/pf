@@ -1,7 +1,8 @@
+/* eslint-disable */
 import React from "react";
 import img1 from "../../../assets/img/portfolio/project-1.jpg";
 import img2 from "../../../assets/img/portfolio/project-2.jpg";
-import portfolioVideo from "../../../assets/img/portfolio/video.mp4";
+// import portfolioVideo from "../../../assets/img/portfolio/video.mp4";
 import CloseImg from "../../../assets/img/cancel.svg";
 import PortfolioData from "../portfolioData";
 import Slider from "react-slick";
@@ -140,13 +141,8 @@ const Modal = ({ modalId, setGetModal }) => {
                     );
                   })}
                 </div>
-                <figure className="modal__img videocontainer">
-                  <iframe
-                    src="https://www.youtube.com/embed/7e90gBu4pas"
-                    title="YouTube video player"
-                    className="youtube-video"
-                    allowFullScreen
-                  ></iframe>
+                <figure className="modal__img">
+                  <img src={item.image} alt="portfolio project demo" />
                 </figure>
 
                 <button
