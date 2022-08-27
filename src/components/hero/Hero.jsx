@@ -1,12 +1,13 @@
+/* eslint-disable */
 import React, { useState } from "react";
 import Modal from "react-modal";
-import heroImg from "../../assets/img/hero/dark.jpg";
+// import heroImg from "../../assets/img/hero/dark.jpg";
 import heroImgMobile from "../../assets/img/hero/img-mobile.jpg";
 import cancelImg from "../../assets/img/cancel.svg";
 import Index from "../../components/about/index";
 
 const heroContent = {
-  heroImage: heroImg,
+  heroImage: heroImgMobile,
   heroMobileImage: heroImgMobile,
   heroTitleName: "Carlos Flores",
   heroDesignation: "web developer",
@@ -26,20 +27,12 @@ const Hero = () => {
   return (
     <>
       <div className="row home-details-container align-items-center">
-        <div
-          className="col-lg-4 bg position-fixed d-none d-lg-block"
-          style={{
-            backgroundImage: `url(${
-              process.env.PUBLIC_URL + heroContent.heroImage
-            })`,
-          }}
-        ></div>
         <div className="col-12 col-lg-8 offset-lg-4 home-details  text-center text-lg-start">
           <div>
             <img
               src={heroContent.heroMobileImage}
-              className="img-fluid main-img-mobile d-sm-block d-lg-none"
-              alt="hero man"
+              className="img-fluid main-img-mobile d-sm-block"
+              alt="Carlos Flores Image"
             />
             <h1 className="text-uppercase poppins-font">
               I'm {heroContent.heroTitleName}.
