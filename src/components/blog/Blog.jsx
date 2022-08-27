@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from "react";
 import Modal from "react-modal";
 import cancelImg from "../../assets/img/cancel.svg";
