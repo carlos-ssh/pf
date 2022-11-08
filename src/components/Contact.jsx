@@ -11,8 +11,9 @@ const Contact = () => {
     const serviceID = "service_ccfo48m";
     const templateID = "template_gz2blv4";
     const userID = "BgFIW6-2M8PMPP3Ha";
+    const PreventDefault = e.preventDefault();
 
-    e.preventDefault();
+    PreventDefault
     emailjs.sendForm(serviceID, templateID, form.current, userID)
       .then(
         (result) => {
@@ -41,7 +42,6 @@ const Contact = () => {
       );
   };
 
-  console.log(sendEmail());
   return (
     <>
       <form id="myForm" className="contactform" ref={form} onSubmit={sendEmail}>
@@ -59,6 +59,8 @@ const Contact = () => {
                 name="user_email"
                 placeholder="YOUR EMAIL"
                 required
+                //store the data
+
               />
             </div>
           </div>
